@@ -12,10 +12,11 @@ class AppContainer extends HTMLElement {
 
 	async connectedCallback() {
 		const pokemonData = await getPokemon();
-		console.log(pokemonData.name);
+		console.log(pokemonData);
 
 		const pokename = this.ownerDocument.createElement('my-card') as Card;
 		pokename.setAttribute(CardAttribute.name, pokemonData.name);
+		pokename.setAttribute(CardAttribute.image, pokemonData.sprites.front_default);
 		this.cardtest.push(pokename);
 		this.render(this.cardtest);
 	}

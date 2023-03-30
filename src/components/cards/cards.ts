@@ -1,13 +1,16 @@
 export enum CardAttribute{
-    "name"="name"
+    "name"="name",
+    "image"="image"
 }
 
 class Card extends HTMLElement{
      name?:string
+     image?: string
 
      static get observedAttributes(){
         const cardattrs: Record<CardAttribute, null>= {
             name: null,
+            image: null,
         }
         return Object.keys(cardattrs)
      }
@@ -33,6 +36,7 @@ class Card extends HTMLElement{
      render(){
         if(this.shadowRoot){
             this.shadowRoot.innerHTML=`
+            <img src="${this.image}">
             <h1>${this.name}</h1>
             `
         }
