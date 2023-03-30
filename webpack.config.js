@@ -9,6 +9,11 @@ module: {
         use: 'ts-loader',
         exclude: /node_modules/,
     },
+    {
+        test: /\.css?$/i,
+        use: 'css-loader',
+        exclude: /node_modules/,
+    },
     ],
 },
 resolve: {

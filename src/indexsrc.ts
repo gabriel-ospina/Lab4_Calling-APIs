@@ -14,10 +14,13 @@ class AppContainer extends HTMLElement {
 		const pokemonData = await getPokemon();
 		console.log(pokemonData);
 
-		const pokename = this.ownerDocument.createElement('my-card') as Card;
-		pokename.setAttribute(CardAttribute.name, pokemonData.name);
-		pokename.setAttribute(CardAttribute.image, pokemonData.sprites.front_default);
-		this.cardtest.push(pokename);
+		pokemonData.forEach((pokemon: any) => {
+			const pokecard = this.ownerDocument.createElement('my-card') as Card;
+			pokecard.setAttribute(CardAttribute.name, pokemon.name);
+			pokecard.setAttribute(CardAttribute.image, pokemon.sprites.front_default);
+			this.cardtest.push(pokecard);
+		});
+		
 		this.render(this.cardtest);
 	}
 
