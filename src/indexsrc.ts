@@ -1,5 +1,6 @@
 import './components/indexComponents';
 import { getPokemon } from './services/fetch';
+import { typeColors } from './services/typeColors';
 import Card, { CardAttribute } from './components/cards/cards';
 
 class AppContainer extends HTMLElement {
@@ -49,7 +50,10 @@ class AppContainer extends HTMLElement {
 			cardtest.forEach((card: any) => {
 				pokenNameSec.appendChild(card);
 			});
+			// let pokeTypes: any = this.ownerDocument.getElementById('main-type');
+			// pokeTypes.style.color = typeColors[type.type.name];
 			this.shadowRoot.appendChild(pokenNameSec);
+
 		}
 	}
 }

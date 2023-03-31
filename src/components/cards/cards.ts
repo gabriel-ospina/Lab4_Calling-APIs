@@ -1,3 +1,5 @@
+import { typeColors } from "../../services/typeColors"
+
 export enum CardAttribute{
     "name"="name",
     "image"="image",
@@ -88,13 +90,15 @@ class Card extends HTMLElement{
      render(){
         if(this.shadowRoot){
             this.shadowRoot.innerHTML=`
+            <link rel="stylesheet" href="../src/components/cards/cards.css">
+            
             <img src="${this.image}">
             <h1>${this.name || "This pokémon doesn't exist"}</h1>
             <section class="types-cont">
-               <div class="type">
+               <div class="type" id="main-type" style="color: ${typeColors[this.type1 || "Unknown"]};">
                   ${this.type1 || "Unknown"}
                </div>
-               <div class="type">
+               <div class="type" id="sec-type" style="color: ${typeColors[this.type2 || "Unknown"]};">
                   ${this.type2 || ""}
                </div>
             </section>
