@@ -2,3 +2,8 @@ section{
     display: flex;
     flex-flow: row;
 }
+
+my-card{
+    min-width: 15%;
+    margin: 0px 10px;
+}

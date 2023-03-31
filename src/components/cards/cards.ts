@@ -92,20 +92,20 @@ class Card extends HTMLElement{
             <h1>${this.name || "This pokémon doesn't exist"}</h1>
             <section class="types-cont">
                <div class="type">
-                  <h3>${this.type1 || "Unknown"}</h3>
+                  ${this.type1 || "Unknown"}
                </div>
                <div class="type">
-                  <h3>${this.type2 || "Unknown"}</h3>
+                  ${this.type2 || ""}
                </div>
             </section>
             <h2>Stats</h2>
             <section>
-               <span><strong>Health: </strong>${this.hp || "Unknown"}</span>
-               <span><strong>Speed: </strong>${this.spd || "Unknown"}</span>
-               <span><strong>Attack: </strong>${this.atck || "Unknown"}</span>
-               <span><strong>Defense: </strong>${this.def || "Unknown"}</span>
-               <span><strong>Special Attack: </strong>${this.spc || "Unknown"}</span>
-               <span><strong>Special Defense: </strong>${this.spcdef || "Unknown"}</span>
+               <p><strong>Health: </strong>${this.hp || "Unknown"}</p>
+               <p><strong>Speed: </strong>${this.spd || "Unknown"}</p>
+               <p><strong>Attack: </strong>${this.atck || "Unknown"}</p>
+               <p><strong>Defense: </strong>${this.def || "Unknown"}</p>
+               <p><strong>Special Attack: </strong>${this.spc || "Unknown"}</p>
+               <p><strong>Special Defense: </strong>${this.spcdef || "Unknown"}</p>
             </section>
             `
         }

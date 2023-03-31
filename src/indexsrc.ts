@@ -25,7 +25,16 @@ class AppContainer extends HTMLElement {
 			pokecard.setAttribute(CardAttribute.spc, pokemon.stats[3].base_stat)
 			pokecard.setAttribute(CardAttribute.spcdef, pokemon.stats[4].base_stat)
 			pokecard.setAttribute(CardAttribute.type1, pokemon.types[0].type.name)
-			// pokecard.setAttribute(CardAttribute.type2, pokemon.types[1].type.name)
+			if (pokemon.types.length> 1){
+				pokecard.setAttribute(CardAttribute.type2, pokemon.types[1].type.name)
+			}
+			else{
+				pokecard.setAttribute(CardAttribute.type2, '')
+			}
+			// pokemon.types.forEach((tipo : any)=>{
+			// 	pokecard.setAttribute(CardAttribute.type1, tipo.type.name)
+
+			// });
 			this.cardtest.push(pokecard);
 		});
 		
