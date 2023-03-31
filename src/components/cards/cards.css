@@ -1,8 +1,37 @@
+.main-cont{
+    min-width: 20vw;
+    margin: 20px;
+    padding: 15px;
+    background-color: beige;
+
+    border-radius: 2rem;
+
+}
+
 .type{
     font-weight: bold;
     text-transform: capitalize;
 }
 
 h1{
-    text-transform: uppercase;
+    text-transform: capitalize;
+}
+
+.upper{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+img{
+    width: 150px;
+}
+
+.info{
+
+    width: 20vw;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

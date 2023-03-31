@@ -92,24 +92,28 @@ class Card extends HTMLElement{
             this.shadowRoot.innerHTML=`
             <link rel="stylesheet" href="../src/components/cards/cards.css">
             
-            <img src="${this.image}">
-            <h1>${this.name || "This pokémon doesn't exist"}</h1>
-            <section class="types-cont">
-               <div class="type" id="main-type" style="color: ${typeColors[this.type1 || "Unknown"]};">
-                  ${this.type1 || "Unknown"}
+            <section class="main-cont">
+               <div class="upper">
+                  <img src="${this.image}">
                </div>
-               <div class="type" id="sec-type" style="color: ${typeColors[this.type2 || "Unknown"]};">
-                  ${this.type2 || ""}
-               </div>
-            </section>
-            <h2>Stats</h2>
-            <section>
-               <p><strong>Health: </strong>${this.hp || "Unknown"}</p>
-               <p><strong>Speed: </strong>${this.spd || "Unknown"}</p>
-               <p><strong>Attack: </strong>${this.atck || "Unknown"}</p>
-               <p><strong>Defense: </strong>${this.def || "Unknown"}</p>
-               <p><strong>Special Attack: </strong>${this.spc || "Unknown"}</p>
-               <p><strong>Special Defense: </strong>${this.spcdef || "Unknown"}</p>
+               <h1>${this.name || "This pokémon doesn't exist"}</h1>
+               <section class="types-cont">
+                  <div class="type" id="main-type" style="color: ${typeColors[this.type1 || "Unknown"]};">
+                     ${this.type1 || "Unknown"}
+                  </div>
+                  <div class="type" id="sec-type" style="color: ${typeColors[this.type2 || "Unknown"]};">
+                     ${this.type2 || ""}
+                  </div>
+               </section>
+               <h2>Stats</h2>
+               <section class="info">
+                  <p><strong>Health: </strong>${this.hp || "Unknown"}</p>
+                  <p><strong>Speed: </strong>${this.spd || "Unknown"}</p>
+                  <p><strong>Attack: </strong>${this.atck || "Unknown"}</p>
+                  <p><strong>Defense: </strong>${this.def || "Unknown"}</p>
+                  <p><strong>Special Attack: </strong>${this.spc || "Unknown"}</p>
+                  <p><strong>Special Defense: </strong>${this.spcdef || "Unknown"}</p>
+               </section>
             </section>
             `
         }

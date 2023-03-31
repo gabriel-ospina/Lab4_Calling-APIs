@@ -32,10 +32,6 @@ class AppContainer extends HTMLElement {
 			else{
 				pokecard.setAttribute(CardAttribute.type2, '')
 			}
-			// pokemon.types.forEach((tipo : any)=>{
-			// 	pokecard.setAttribute(CardAttribute.type1, tipo.type.name)
-
-			// });
 			this.cardtest.push(pokecard);
 		});
 		
@@ -50,8 +46,6 @@ class AppContainer extends HTMLElement {
 			cardtest.forEach((card: any) => {
 				pokenNameSec.appendChild(card);
 			});
-			// let pokeTypes: any = this.ownerDocument.getElementById('main-type');
-			// pokeTypes.style.color = typeColors[type.type.name];
 			this.shadowRoot.appendChild(pokenNameSec);
 
 		}
