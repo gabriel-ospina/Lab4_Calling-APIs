@@ -15,6 +15,8 @@ export const typeColors: any = {
     dragon: '#DA627D',
     steel: '#1D8A99',
     fighting: '#2F2F2F',
+    fairy: '#DEA5A4',
+    dark: '#871F78',
     default: '#2A1A1F',
 };
 

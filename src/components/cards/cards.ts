@@ -98,21 +98,25 @@ class Card extends HTMLElement{
                </div>
                <h1>${this.name || "This pokémon doesn't exist"}</h1>
                <section class="types-cont">
-                  <div class="type" id="main-type" style="color: ${typeColors[this.type1 || "Unknown"]};">
+                  <div class="type" style="color: ${typeColors[this.type1 || "Unknown"]}; border: dashed ${typeColors[this.type1 || "Unknown"]} 2px;">
                      ${this.type1 || "Unknown"}
                   </div>
-                  <div class="type" id="sec-type" style="color: ${typeColors[this.type2 || "Unknown"]};">
+                  <div class="type" style="color: ${typeColors[this.type2 || "Unknown"]}; border: dashed ${typeColors[this.type2 || "Unknown"]} 2px;">
                      ${this.type2 || ""}
                   </div>
                </section>
-               <h2>Stats</h2>
+               <h2>Base Stats</h2>
                <section class="info">
-                  <p><strong>Health: </strong>${this.hp || "Unknown"}</p>
-                  <p><strong>Speed: </strong>${this.spd || "Unknown"}</p>
-                  <p><strong>Attack: </strong>${this.atck || "Unknown"}</p>
-                  <p><strong>Defense: </strong>${this.def || "Unknown"}</p>
-                  <p><strong>Special Attack: </strong>${this.spc || "Unknown"}</p>
-                  <p><strong>Special Defense: </strong>${this.spcdef || "Unknown"}</p>
+                  <div class="left-side">
+                     <p><strong>Health: </strong>${this.hp || "Unknown"}</p>
+                     <p><strong>Attack: </strong>${this.atck || "Unknown"}</p>
+                     <p><strong>Special Attack: </strong>${this.spc || "Unknown"}</p>
+                  </div>
+                  <div class="right-side">
+                     <p><strong>Speed: </strong>${this.spd || "Unknown"}</p>
+                     <p><strong>Defense: </strong>${this.def || "Unknown"}</p>
+                     <p><strong>Special Defense: </strong>${this.spcdef || "Unknown"}</p>
+                  </div>
                </section>
             </section>
             `

@@ -9,3 +9,7 @@ section{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+my-card{
+    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+}
